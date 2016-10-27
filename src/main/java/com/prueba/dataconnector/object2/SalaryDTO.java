@@ -5,14 +5,14 @@
  */
 package com.prueba.dataconnector.object2;
 
-import com.prueba.dataconnector.annotation.DataConnectorPOJO;
+import com.dataconnector.annotation.DataConnectorPOJO;
 import java.util.Date;
 
 /**
  *
  * @author proveedor_hhurtado
  */
-@DataConnectorPOJO
+
 public class SalaryDTO {
     private int salary;
   

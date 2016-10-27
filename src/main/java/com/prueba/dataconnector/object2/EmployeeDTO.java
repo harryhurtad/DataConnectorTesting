@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.prueba.dataconnector.object;
+package com.prueba.dataconnector.object2;
 
-import com.prueba.dataconnector.annotation.DataConnectorPOJO;
+import com.dataconnector.annotation.DataConnectorAttributes;
+import com.dataconnector.annotation.DataConnectorPOJO;
 import java.util.Date;
 
 /**
@@ -14,12 +15,16 @@ import java.util.Date;
  */
 @DataConnectorPOJO
 public class EmployeeDTO {
+    @DataConnectorAttributes(name = "emp_no")
     private Integer empNo;
-   
-    private Date birthDate;
     
+    private Date birthDate;
+    @DataConnectorAttributes(name = "first_name")
     private String firstName;
 
+    @DataConnectorAttributes(name = "last_name")
+    private String lastName;
+    
     public Integer getEmpNo() {
         return empNo;
     }
@@ -43,6 +48,21 @@ public class EmployeeDTO {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeDTO{" + "empNo=" + empNo + ", birthDate=" + birthDate + ", firstName=" + firstName + ", lastName=" + lastName + '}';
+    }
+    
+    
     
     
 }

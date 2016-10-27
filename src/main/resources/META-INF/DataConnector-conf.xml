@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : DataConnector.xml
+    Created on : 18 de mayo de 2016, 05:13 PM
+    Author     : proveedor_hhurtado
+    Description:
+        Purpose of the document follows.
+-->
+
+<DataConnector  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+                xmlns='http://xml.com.prueba/schema/DataConnector'
+                xsi:schemaLocation='http://xml.com.prueba/schema/DataConnector DataConnector.xsd'>
+   <!-- <context contextName="ConnectorOracle">
+         <jar_table_location>C:\Users\proveedor_hhurtado\.m2\repository\com\dataconnector\bd_employees\1.0\bd_employees-1.0.jar</jar_table_location>
+        <provider>ORACLE</provider>  
+        <connection>
+            <jndi_name>jdbc/OracleUnico</jndi_name>
+            <jndi_driver>oracle.jdbc.OracleDriver</jndi_driver>            
+        </connection>
+    </context>-->
+    <!--<context contextName="ConnectorSQLServer">   
+        <jar_table_location>C:\Users\proveedor_hhurtado\.m2\repository\com\dataconnector\bd_unico\1.0\bd_unico-1.0.jar</jar_table_location>
+        <provider>SQLSERVER</provider>
+        <connection>           
+            <driver_connection>               
+                <user>consulta</user>
+                <driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver>
+                <password>consulta</password>
+                <url>jdbc:sqlserver://10.130.4.14:1440;databaseName=DBUnico</url>
+                <name_schema>DBUnico</name_schema>
+            </driver_connection>
+        </connection>
+    </context>-->
+    <context contextName="ConnectorSQLServer">   
+        <jar_table_location>C:\Users\proveedor_hhurtado\.m2\repository\com\dataconnector\bd_unico\1.0\bd_unico-1.0.jar</jar_table_location>
+        <provider>SQLSERVER</provider>
+        <connection>           
+            <driver_connection>               
+                <user>consulta</user>
+                <driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver>
+                <password>consulta</password>
+                <url>jdbc:sqlserver://10.137.0.11;databaseName=DBUnico</url>
+                <name_schema>DBUnico</name_schema>
+            </driver_connection>
+        </connection>
+    </context>
+    <context contextName="ConnectorMysql">   
+        <jar_table_location>C:\Users\proveedor_hhurtado\.m2\repository\com\dataconnector\bd_employees\1.0\bd_employees-1.0.jar</jar_table_location>
+        <provider>GENERIC</provider>     
+        <connection>           
+            <driver_connection>
+                <user>root</user>
+                <driver>com.mysql.jdbc.Driver</driver>
+                <password>Pruebas_123?</password>
+                <url>jdbc:mysql://localhost:3306/employees</url>
+                <name_schema>employees</name_schema>
+            </driver_connection>
+        </connection>
+    </context>
+    <package_base>com.prueba.dataconnector.object2</package_base>  
+</DataConnector>

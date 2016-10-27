@@ -5,7 +5,8 @@
  */
 package com.prueba.dataconnector.object2;
 
-import com.prueba.dataconnector.annotation.DataConnectorPOJO;
+import com.dataconnector.annotation.DataConnectorAttributes;
+import com.dataconnector.annotation.DataConnectorPOJO;
 
 /**
  *
@@ -13,9 +14,10 @@ import com.prueba.dataconnector.annotation.DataConnectorPOJO;
  */
 @DataConnectorPOJO
 public class Department {
-     private String deptNo;
+    @DataConnectorAttributes(name = "id_departamento")
+    private String deptNo;
     
-  
+    
     private String deptName;
 
     public String getDeptNo() {
